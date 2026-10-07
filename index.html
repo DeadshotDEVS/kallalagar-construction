@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALLALAGAR CONSTRUCTION — Premium Builders in Tamil Nadu</title>
+    <meta name="description" content="Kallalagar Construction — Award-winning builders in Tamil Nadu crafting residential, commercial, and luxury developments with unmatched quality.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600;700&family=Tiro+Tamil:ital@0;1&family=Mukta+Malar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-counter" id="loaderCounter">0</div>
+        <div class="loader-bar-track">
+            <div class="loader-bar" id="loaderBar"></div>
+        </div>
+    </div>
+
+    <!-- Grain overlay for texture -->
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-mark">KC</div>
+                <div class="logo-text">
+                    <span class="logo-name">KALLALAGAR</span>
+                    <span class="logo-sub">CONSTRUCTION</span>
+                </div>
+            </a>
+            <nav class="nav-desktop">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#services" class="nav-item">Services</a>
+                <a href="#heritage" class="nav-item">Heritage</a>
+                <a href="#contact" class="nav-item nav-item-cta">
+                    <span>Contact</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </nav>
+            <button class="burger" id="burger" aria-label="Menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-links">
+            <a href="#about" class="mobile-nav-link"><span class="mobile-nav-idx">01</span>About</a>
+            <a href="#projects" class="mobile-nav-link"><span class="mobile-nav-idx">02</span>Projects</a>
+            <a href="#services" class="mobile-nav-link"><span class="mobile-nav-idx">03</span>Services</a>
+            <a href="#heritage" class="mobile-nav-link"><span class="mobile-nav-idx">04</span>Heritage</a>
+            <a href="#contact" class="mobile-nav-link"><span class="mobile-nav-idx">05</span>Contact</a>
+        </div>
+        <div class="mobile-nav-footer">
+            <a href="tel:09626445009">096264 45009</a>
+            <p>Velanpatti, Tamil Nadu</p>
+        </div>
+    </div>
+
+    <!-- ==================== HERO SLIDER ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-slides">
+            <div class="hero-slide active" data-index="0">
+                <div class="hero-slide-img">
+                    <img src="images/villa.png" alt="Modern Tropical Villa at Sunset">
+                </div>
+            </div>
+            <div class="hero-slide" data-index="1">
+                <div class="hero-slide-img">
+                    <img src="images/township.jpg" alt="Royal Gardens — Luxury Township">
+                </div>
+            </div>
+            <div class="hero-slide" data-index="2">
+                <div class="hero-slide-img">
+                    <img src="images/commercial.jpg" alt="Business Hub — Commercial Complex">
+                </div>
+            </div>
+            <div class="hero-slide" data-index="3">
+                <div class="hero-slide-img">
+                    <img src="images/luxury.jpg" alt="Premium Living — Night View">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="hero-tag-line"></span>
+                <span>Real Estate Builders &amp; Construction</span>
+            </div>
+            <h1 class="hero-headline">
+                <span class="hero-headline-row">
+                    <span class="hero-word" data-delay="0">நாங்கள் காலத்தால்</span>
+                </span>
+                <span class="hero-headline-row">
+                    <span class="hero-word hero-word-italic" data-delay="1">அழியாத இடங்களை</span>
+                </span>
+                <span class="hero-headline-row">
+                    <span class="hero-word" data-delay="2">உருவாக்குகிறோம்</span>
+                </span>
+            </h1>
+            <p class="hero-desc">Tamil Nadu's trusted construction partner delivering iconic residential, commercial &amp; luxury developments for over a decade.</p>
+        </div>
+
+        <div class="hero-bottom">
+            <div class="hero-slider-info">
+                <div class="hero-slider-counter">
+                    <span class="hero-slider-current" id="sliderCurrent">01</span>
+                    <span class="hero-slider-sep">/</span>
+                    <span class="hero-slider-total">04</span>
+                </div>
+                <div class="hero-slider-name" id="sliderName">Kallalagar Towers</div>
+            </div>
+            <div class="hero-slider-controls">
+                <button class="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="Previous slide">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="hero-arrow hero-arrow-next" id="heroNext" aria-label="Next slide">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+            <div class="hero-scroll-cue">
+                <span>SCROLL</span>
+                <div class="hero-scroll-line"></div>
+            </div>
+        </div>
+
+        <!-- Progress bar for auto-slide -->
+        <div class="hero-progress">
+            <div class="hero-progress-bar" id="heroProgressBar"></div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS RIBBON ==================== -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number"><span class="count" data-target="150">0</span><sup>+</sup></div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number"><span class="count" data-target="12">0</span><sup>+</sup></div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number"><span class="count" data-target="500">0</span><sup>+</sup></div>
+                    <div class="stat-label">Happy Families</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number"><span class="count" data-target="98">0</span><sup>%</sup></div>
+                    <div class="stat-label">On-Time Delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-col-left">
+                    <div class="section-eyebrow reveal-up"><span class="eyebrow-num">01</span> About Us</div>
+                    <h2 class="about-heading reveal-up">
+                        நம்பிக்கை, தரம் <br>மற்றும் தமிழ்நாட்டின் <br><em>பாரம்பரியத்தால்</em> உருவாக்கப்பட்ட பெயர்
+                    </h2>
+                    <div class="about-image-stack reveal-up">
+                        <div class="about-img about-img-main">
+                            <img src="images/villa.png" alt="Premium Modern Tropical Villa by Kallalagar">
+                        </div>
+                        <div class="about-img about-img-float">
+                            <img src="images/culture.jpg" alt="Tamil Nadu Heritage">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-col-right">
+                    <p class="about-lead reveal-up">Kallalagar Construction is more than a building company — we are architects of dreams rooted in the rich heritage of Tamil Nadu.</p>
+                    <p class="about-body reveal-up">Every structure we raise carries our DNA: unwavering commitment to quality materials, transparent pricing, and designs that marry South Indian tradition with global modernity. From luxury villas to commercial hubs, we build spaces that inspire generations.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature reveal-up">
+                            <div class="feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Quality Assured</strong>
+                                <span>ISI-certified materials &amp; rigorous QC at every stage</span>
+                            </div>
+                        </div>
+                        <div class="about-feature reveal-up">
+                            <div class="feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div>
+                                <strong>On-Time Delivery</strong>
+                                <span>98% projects delivered within committed timeline</span>
+                            </div>
+                        </div>
+                        <div class="about-feature reveal-up">
+                            <div class="feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <strong>Customer First</strong>
+                                <span>Transparent pricing &amp; lifetime post-sale support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS ==================== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="projects-top">
+                <div>
+                    <div class="section-eyebrow reveal-up"><span class="eyebrow-num">02</span> Featured Projects</div>
+                    <h2 class="projects-heading reveal-up">சிறந்த <em>கட்டுமானங்கள்</em></h2>
+                </div>
+                <div class="projects-nav reveal-up">
+                    <button class="proj-arrow proj-arrow-prev" id="projPrev" aria-label="Previous project">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button class="proj-arrow proj-arrow-next" id="projNext" aria-label="Next project">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="projects-carousel" id="projectsCarousel">
+            <div class="projects-track" id="projectsTrack">
+                <article class="project-card">
+                    <div class="project-card-img">
+                        <img src="images/township.jpg" alt="Kallalagar Royal Gardens" loading="lazy">
+                        <div class="project-card-badge">Premium Township</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Kallalagar Royal Gardens</h3>
+                        <p>52 luxury villas with traditional Tamil architecture, gated community, clubhouse &amp; landscaped gardens</p>
+                        <div class="project-card-meta">
+                            <span>Velanpatti</span>
+                            <span>52 Villas</span>
+                            <span>1200–3500 sq.ft</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-img">
+                        <img src="images/luxury.jpg" alt="Kallalagar Towers" loading="lazy">
+                        <div class="project-card-badge">Luxury Living</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Kallalagar Towers</h3>
+                        <p>Premium high-rise with infinity pool, sky lounge, landscaped podium &amp; world-class amenities</p>
+                        <div class="project-card-meta">
+                            <span>Dindigul</span>
+                            <span>120 Units</span>
+                            <span>950–2400 sq.ft</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-img">
+                        <img src="images/villa.png" alt="Heritage Grand Villas" loading="lazy">
+                        <div class="project-card-badge">Heritage Homes</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Heritage Grand Villas</h3>
+                        <p>Chettinad-inspired luxury villas with contemporary interiors, private gardens &amp; smart home tech</p>
+                        <div class="project-card-meta">
+                            <span>Natham</span>
+                            <span>24 Villas</span>
+                            <span>2800–4500 sq.ft</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-img">
+                        <img src="images/commercial.jpg" alt="Kallalagar Business Hub" loading="lazy">
+                        <div class="project-card-badge">Under Construction</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Kallalagar Business Hub</h3>
+                        <p>Grade-A commercial complex with smart building tech, co-working zones &amp; retail frontage</p>
+                        <div class="project-card-meta">
+                            <span>Dindigul Main Road</span>
+                            <span>85,000 sq.ft</span>
+                            <span>2025 Delivery</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="container">
+            <div class="projects-dots" id="projectsDots">
+                <button class="proj-dot active" data-idx="0"></button>
+                <button class="proj-dot" data-idx="1"></button>
+                <button class="proj-dot" data-idx="2"></button>
+                <button class="proj-dot" data-idx="3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-eyebrow reveal-up"><span class="eyebrow-num">03</span> Our Services</div>
+            <h2 class="services-heading reveal-up">நாங்கள் என்ன <em>கட்டுகிறோம்</em></h2>
+            <div class="services-grid">
+                <div class="service-card reveal-up">
+                    <span class="service-num">01</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3>Residential Construction</h3>
+                    <p>Individual homes, apartments &amp; premium villas tailored to the Tamil Nadu lifestyle — modern design rooted in tradition.</p>
+                    <div class="service-tags">
+                        <span>Individual Homes</span><span>Apartments</span><span>Villas</span><span>Townships</span>
+                    </div>
+                </div>
+                <div class="service-card reveal-up">
+                    <span class="service-num">02</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg>
+                    </div>
+                    <h3>Commercial Projects</h3>
+                    <p>State-of-the-art office complexes, retail spaces &amp; mixed-use developments built for modern business.</p>
+                    <div class="service-tags">
+                        <span>Office Spaces</span><span>Retail</span><span>Mixed-Use</span><span>Industrial</span>
+                    </div>
+                </div>
+                <div class="service-card reveal-up">
+                    <span class="service-num">03</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Turnkey interior solutions fusing traditional South Indian aesthetics with contemporary global trends.</p>
+                    <div class="service-tags">
+                        <span>Modular Kitchens</span><span>Living Spaces</span><span>Turnkey</span><span>Custom</span>
+                    </div>
+                </div>
+                <div class="service-card reveal-up">
+                    <span class="service-num">04</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3>Planning &amp; Consulting</h3>
+                    <p>End-to-end architectural planning, RERA compliance &amp; project consulting from concept to handover.</p>
+                    <div class="service-tags">
+                        <span>Architecture</span><span>RERA</span><span>Consulting</span><span>Project Mgmt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HERITAGE PARALLAX ==================== -->
+    <section class="heritage" id="heritage">
+        <div class="heritage-bg">
+            <img src="images/culture.jpg" alt="Tamil Nadu Temple Heritage" loading="lazy">
+        </div>
+        <div class="heritage-overlay"></div>
+        <div class="heritage-content container">
+            <div class="section-eyebrow section-eyebrow-light reveal-up"><span class="eyebrow-num">04</span> Our Roots</div>
+            <h2 class="heritage-heading reveal-up">
+                தமிழ்நாட்டின்<br>
+                <em>பாரம்பரியத்தில்</em> வேரூன்றியுள்ளது
+            </h2>
+            <p class="heritage-desc reveal-up">Like the magnificent temples of Madurai that have endured for millennia, we build with permanence, precision &amp; devotion. Our name, inspired by Lord Kallalagar, reflects our promise — structures as timeless as the culture we're proud to represent.</p>
+            <div class="heritage-pills reveal-up">
+                <div class="heritage-pill">
+                    <span class="heritage-pill-icon">🏛️</span>
+                    <div>
+                        <strong>Heritage Inspired</strong>
+                        <span>Traditional meets modern engineering</span>
+                    </div>
+                </div>
+                <div class="heritage-pill">
+                    <span class="heritage-pill-icon">🌿</span>
+                    <div>
+                        <strong>Eco Conscious</strong>
+                        <span>Sustainable materials &amp; green building</span>
+                    </div>
+                </div>
+                <div class="heritage-pill">
+                    <span class="heritage-pill-icon">🤝</span>
+                    <div>
+                        <strong>Community Driven</strong>
+                        <span>Empowering local communities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-eyebrow reveal-up">Client Testimonials</div>
+            <h2 class="test-heading reveal-up">What Our <em>Clients</em> Say</h2>
+            <div class="test-slider">
+                <div class="test-card active" data-tidx="0">
+                    <blockquote>"Kallalagar Construction delivered our dream home beyond expectations. The attention to detail, quality of materials, and personal care was extraordinary. <strong>Highly recommended!</strong>"</blockquote>
+                    <div class="test-author">
+                        <div class="test-avatar">RK</div>
+                        <div>
+                            <strong>Rajesh Kumar</strong>
+                            <span>Villa Owner, Velanpatti</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card" data-tidx="1">
+                    <blockquote>"Professional team with excellent project management. Our apartment was completed ahead of schedule and the quality is top-notch. The buying experience was <strong>smooth and transparent.</strong>"</blockquote>
+                    <div class="test-author">
+                        <div class="test-avatar">SR</div>
+                        <div>
+                            <strong>Sundar Rajan</strong>
+                            <span>Apartment Owner, Dindigul</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card" data-tidx="2">
+                    <blockquote>"We chose Kallalagar for our commercial project — best decision ever. They understood our needs perfectly and delivered a space our team <strong>loves working in.</strong>"</blockquote>
+                    <div class="test-author">
+                        <div class="test-avatar">PS</div>
+                        <div>
+                            <strong>Priya Shanmugam</strong>
+                            <span>Business Owner, Natham</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-dots">
+                <button class="test-dot active" data-tdot="0"></button>
+                <button class="test-dot" data-tdot="1"></button>
+                <button class="test-dot" data-tdot="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <div class="section-eyebrow reveal-up"><span class="eyebrow-num">05</span> Get in Touch</div>
+                    <h2 class="contact-heading reveal-up">உங்கள் <em>கனவு</em> இல்லத்தை<br>கட்ட தயாரா?</h2>
+                    <p class="contact-desc reveal-up">From individual homes to large-scale developments, our team is ready to bring your vision to life.</p>
+                    <div class="contact-details reveal-up">
+                        <a href="tel:09626445009" class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <small>Call Us</small>
+                                <span>096264 45009</span>
+                            </div>
+                        </a>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <small>Visit Us</small>
+                                <span>Main Road, Opp. Canara Bank, Velanpatti, TN 624401</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <small>Office Hours</small>
+                                <span>Mon – Sat: 9 AM – 9 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-right reveal-up">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <input type="text" id="fname" required placeholder=" ">
+                                <label for="fname">Full Name</label>
+                            </div>
+                            <div class="form-field">
+                                <input type="tel" id="fphone" required placeholder=" ">
+                                <label for="fphone">Phone</label>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="femail" placeholder=" ">
+                            <label for="femail">Email Address</label>
+                        </div>
+                        <div class="form-field">
+                            <select id="finterest" required>
+                                <option value="" disabled selected>I'm interested in...</option>
+                                <option>Residential Property</option>
+                                <option>Commercial Space</option>
+                                <option>Luxury Villa</option>
+                                <option>Interior Design</option>
+                                <option>Consulting</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <textarea id="fmsg" rows="4" placeholder=" "></textarea>
+                            <label for="fmsg">Tell us about your project</label>
+                        </div>
+                        <button type="submit" class="form-submit" id="formSubmitBtn">
+                            <span>Send Enquiry</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-big container">
+            <h2 class="footer-cta-text">ஒன்றாக இணைந்து<br><em>சிறந்ததை</em> உருவாக்குவோம்</h2>
+            <a href="tel:09626445009" class="footer-cta-btn">
+                <span>Call 096264 45009</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </div>
+        <div class="footer-bottom container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-mark">KC</div>
+                        <div class="logo-text">
+                            <span class="logo-name">KALLALAGAR</span>
+                            <span class="logo-sub">CONSTRUCTION</span>
+                        </div>
+                    </div>
+                    <p>Building Legacy. Crafting Futures.<br>Velanpatti, Tamil Nadu.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#services">Residential</a>
+                    <a href="#services">Commercial</a>
+                    <a href="#services">Interior Design</a>
+                    <a href="#services">Consulting</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="tel:09626445009">096264 45009</a>
+                    <a href="https://wa.me/919626445009" target="_blank">WhatsApp</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Directions</a>
+                </div>
+            </div>
+            <div class="footer-bar">
+                <span>© 2024 Kallalagar Construction. All rights reserved.</span>
+                <span>Crafted with pride in Tamil Nadu 🏗️</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
